@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 
-import Component1 from './app/components/Component1/Component1';
+import Component2 from './app/components/Component2/ComponentStyle';
 
 export default class testApp extends Component {
   render() {
