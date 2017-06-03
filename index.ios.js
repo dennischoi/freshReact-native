@@ -1,7 +1,7 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
+ * 
+ *
+ *Press Cmd+R to reload, Cmd+D or shake for dev menu
  */
 
 import React, { Component } from 'react';

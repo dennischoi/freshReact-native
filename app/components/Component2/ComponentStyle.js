@@ -8,20 +8,21 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   Text,
-  View
+  View,
+  StyleSheet
 } from 'react-native';
 
-import Component1 from './app/components/Component1/Component1';
 
-export default class testApp extends Component {
+export default class Component2 extends Component {
   render() {
     return (
       <View>
-          <Component2 />
+      	<Text></Text>
       </View>
     );
   }
 }
 
 
-AppRegistry.registerComponent('testApp', () => testApp);
+
+AppRegistry.registerComponent('Component2', () => Component2);
