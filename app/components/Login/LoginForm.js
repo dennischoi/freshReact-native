@@ -23,6 +23,9 @@ export default class LoginForm extends Component {
           placeholder="Username"
           placeholderTextColor="rgba(255, 255, 255, 0.7)"
           returnKeyType="next"
+          keyboardType="email-address"
+          autoCapitalize="none"
+          autoCorrect={ false }
           onSubmitEditing={ () => this.passwordInput.focus() }
           style={ styles.input }
         />
