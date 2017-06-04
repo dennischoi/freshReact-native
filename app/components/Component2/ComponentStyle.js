@@ -57,7 +57,7 @@ export default class Component2 extends Component {
 		      			<Text style={ styles.text }>Third one</Text>
 		      		</View>
 		      		<View style={ styles.textV4 }>
-		      			<Text style={ styles.text }>Last one</Text>
+		      			<Text style={ styles.text }>{ this.state.textValue }</Text>
 		      		</View>
 	  	   		</View>
 
@@ -68,7 +68,7 @@ export default class Component2 extends Component {
 			     		onChangeText={ (value) => this.onChangeText(value) }
 			     		onSubmitEditing={this.onSubmit}
 			     	/>
-	     			<Text>{ this.state.textValue }</Text>
+	     		
 	  	  		</View>
 
 	  	  		<View>
