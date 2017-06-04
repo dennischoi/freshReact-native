@@ -8,20 +8,29 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   Text,
-  View
+  View,
+  StyleSheet
 } from 'react-native';
 
-import Component2 from './app/components/Component2/ComponentStyle';
+import Login from './app/components/Login/Login';
 
 export default class testApp extends Component {
   render() {
     return (
-      <View>
-          <Component2 />
+      <View style={ styles.mainContainer }>
+          <Login />
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+
+  mainContainer: {
+    flex: 1
+  },
+
+});
 
 
 AppRegistry.registerComponent('testApp', () => testApp);

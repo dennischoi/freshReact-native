@@ -121,4 +121,4 @@ const styles = StyleSheet.create({
 	}
 });
 
-AppRegistry.registerComponent('Component2', () => Component2);
+// AppRegistry.registerComponent('Component2', () => Component2);
