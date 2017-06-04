@@ -22,13 +22,17 @@ export default class LoginForm extends Component {
         <TextInput
           placeholder="Username"
           placeholderTextColor="rgba(255, 255, 255, 0.7)"
+          returnKeyType="next"
+          onSubmitEditing={ () => this.passwordInput.focus() }
           style={ styles.input }
         />
         <TextInput
           placeholder="Password"
           placeholderTextColor="rgba(255, 255, 255, 0.7)"
+          returnKeyType="go"
           secureTextEntry
           style={ styles.input }
+          ref={ (input) => this.passwordInput = input }
         />
 
         <TouchableOpacity style={ styles.buttonContainer }>
