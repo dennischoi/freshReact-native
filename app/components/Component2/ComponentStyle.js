@@ -9,31 +9,77 @@ import {
   AppRegistry,
   Text,
   View,
-  StyleSheet
+  StyleSheet,
+  TextInput,
+  Switch
 } from 'react-native';
 
 
 export default class Component2 extends Component {
-  render() {
-    return (
-      <View style={ styles.mainContainer }>
-      	<View style={ styles.subContainer }>
-	      	<View style={ styles.textV1 }>
-	      		<Text style={ styles.text }>First one</Text>
-	      	</View>
-	      	<View style={ styles.textV2 }>
-	      		<Text style={ styles.text }>Second one</Text>
-	      	</View>
-	      	<View style={ styles.textV3 }>
-	      		<Text style={ styles.text }>Third one</Text>
-	      	</View>
-	      	<View style={ styles.textV4 }>
-	      		<Text style={ styles.text }>Last one</Text>
-	      	</View>
-	     </View>
-      </View>
-    );
-  }
+	// State
+	constructor(){
+		super();
+		this.state = {
+			textValue: 'Hello',
+			switchValue: false
+		}
+	}
+
+	// Function
+	onChangeText(value){
+		this.setState({
+			textValue: value
+		});
+	}
+
+	onSubmit(){
+		console.log("Submiting...")
+	}
+
+	onSwitchChange(value){
+		this.setState({
+			switchValue: value
+		});
+	}
+
+	// Render onto DOM
+ 	render() {
+ 	   return (
+ 	    	<View style={ styles.mainContainer }>
+ 	     		<View style={ styles.subContainer }>
+		      		<View style={ styles.textV1 }>
+		      			<Text style={ styles.text }>First one</Text>
+		      		</View>
+		      		<View style={ styles.textV2 }>
+		      			<Text style={ styles.text }>Second one</Text>
+		      		</View>
+		      		<View style={ styles.textV3 }>
+		      			<Text style={ styles.text }>Third one</Text>
+		      		</View>
+		      		<View style={ styles.textV4 }>
+		      			<Text style={ styles.text }>Last one</Text>
+		      		</View>
+	  	   		</View>
+
+	  	  		<View>
+		  	   		<TextInput 
+			     		placeholder="Enter Text"
+			     		value={ this.state.textValue }
+			     		onChangeText={ (value) => this.onChangeText(value) }
+			     		onSubmitEditing={this.onSubmit}
+			     	/>
+	     			<Text>{ this.state.textValue }</Text>
+	  	  		</View>
+
+	  	  		<View>
+	  	  			<Switch 
+	  	  				value={ this.state.switchValue }
+	  	  				onValueChange={ (value) => this.onSwitchChange(value) }
+	  	  			/>
+	  	  		</View>
+  	    	</View>
+  	  	);
+ 	} //Render
 }
 
 const styles = StyleSheet.create({
