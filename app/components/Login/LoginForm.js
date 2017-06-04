@@ -21,10 +21,13 @@ export default class LoginForm extends Component {
       <View style={ styles.container }>
         <TextInput
           placeholder="Username"
+          placeholderTextColor="rgba(255, 255, 255, 0.7)"
           style={ styles.input }
         />
         <TextInput
           placeholder="Password"
+          placeholderTextColor="rgba(255, 255, 255, 0.7)"
+          secureTextEntry
           style={ styles.input }
         />
 
@@ -43,7 +46,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
     marginBottom: 20,
     paddingHorizontal: 10
   },
