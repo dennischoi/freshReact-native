@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: 'red',
+    paddingHorizontal: 10
   },
   headerLogo: {
     width: 60,
