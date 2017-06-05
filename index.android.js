@@ -12,25 +12,15 @@ import {
   StyleSheet
 } from 'react-native';
 
-import Login from './app/components/Login/Login';
+import App from './app/components/App';
 
 export default class testApp extends Component {
   render() {
     return (
-      <View style={ styles.mainContainer }>
-          <Login />
-      </View>
+      <App />
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-  mainContainer: {
-    flex: 1
-  },
-
-});
 
 
 AppRegistry.registerComponent('testApp', () => testApp);

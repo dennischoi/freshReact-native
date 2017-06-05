@@ -16,8 +16,8 @@ import {
   
 } from 'react-native';
 // Import other Components
+import Header from '../Header/Header';
 import LoginForm from './LoginForm';
-
 
 export default class Login extends Component {
 	// State
@@ -74,4 +74,4 @@ const styles = StyleSheet.create({
 
 });
 
-AppRegistry.registerComponent('Login', () => Login);
+// AppRegistry.registerComponent('Login', () => Login);
