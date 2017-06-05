@@ -38,12 +38,12 @@ export default class App extends Component {
   render() {
     return (
       <View style={ styles.mainContainer }>
-      	<SideMenu
-      		menu={ <Menu /> }
-      		isOpen={ this.state.isOpen }
-      		onChange={ (isOpen) => this.updateMenu(isOpen) }
-      	>
-      		<Header toggle={ this.toggle.bind(this) }/>
+    		<Header toggle={ this.toggle.bind(this) }/>
+        <SideMenu
+          menu={ <Menu /> }
+          isOpen={ this.state.isOpen }
+          onChange={ (isOpen) => this.updateMenu(isOpen) }
+        >
       		<Slider />
       		<List />
       	</SideMenu>
