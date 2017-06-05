@@ -11,7 +11,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Header = props => (
   <View style={ styles.headerContainer }>
-    <TouchableWithoutFeedback onPress={ () => null }>
+    <TouchableWithoutFeedback onPress={ () => props.toggle() }>
       <Icon 
         name='bars'
         color='white'

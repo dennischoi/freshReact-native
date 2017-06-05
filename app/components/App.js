@@ -6,16 +6,45 @@ import {
   AppRegistry
 } from 'react-native';
 
+import SideMenu from 'react-native-side-menu';
+
 import Header from './Header/Header';
 import Login from './Login/Login';
 
 
 
 export default class App extends Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			isOpen: false
+		}
+	}
+
+	// Function
+	toggle(){
+		this.setState({
+			isOpen: !this.state.isOpen
+		})
+	}
+
+	updateMenu(isOpen){
+		this.setState({isOpen})
+
+	}
+
   render() {
     return (
       <View style={ styles.mainContainer }>
-      	<Header />
+      	<SideMenu
+      		menu={}
+      		isOpen={ this.state.isOpen }
+      		onChange={ (isOpen) => this.updateMenu(isOpen) }
+      	>
+      		<Header toggle={ this.toggle.bind(this) }/>
+      		<Slide />
+      		<List />
+      	</SideMenu>
         <Login />
       </View>
     );
